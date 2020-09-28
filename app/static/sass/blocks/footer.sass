@@ -1,0 +1,116 @@
+.footer
+    padding: 60px 0
+    background-color: var(--color-lightbg)
+    &__container
+        display: flex
+        flex-wrap: wrap
+        align-items: top
+        justify-content: space-between
+    &__mail
+        display: block
+        margin-bottom: 40px
+    &__phones
+        display: block
+        margin: 0 0 35px
+    &__logo
+        margin-bottom: 45px
+.footer-phones
+    svg
+        width: 15px
+        height: 15px
+    &__item
+        &:not(:last-child)
+            margin-bottom: 25px
+        span
+            font-size: 18px
+            &::after
+                content: ''
+                vertical-align: middle
+                margin: 0 10px
+                display: inline-block
+                width: 15px
+                height: 1px
+                background-color: black
+                
+
+.footer-mail
+    svg
+        vertical-align: middle
+        width: 15px
+        height: 12px
+
+.footer-social
+    display: flex
+    > a
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 31px
+        width: 31px
+        border-radius: 31px 
+        background-color: black
+        &:not(:last-child)
+            margin-right: 20px
+    &__icon
+        fill: var(--color-white)
+        &--fb
+            width: 10px
+            height: 18px
+        &--youtube
+            width: 15px
+            height: 10px
+            path:nth-child(2)
+                fill: black
+        &--vk
+            width: 15px
+            height: 8px
+        &--instagram
+            width: 15px
+            height: 15px
+
+.footer-info
+    margin: 0
+    font-size: 14px
+    color: var(--color-gray)
+    &__item
+        &:not(:last-child)
+            margin-bottom: 15px
+        &:first-child
+            color: #828282
+            font-size: 16px
+        &:nth-child(2)
+            color: #828282
+            margin-bottom: 30px
+        &:nth-child(4)
+            margin-bottom: 30px
+        &:last-child
+    &__dev
+        > span
+            &:nth-child(1)
+               color: #828282 
+               &::after
+                    content: ''
+                    display: inline-block
+                    vertical-align: middle
+                    width: 6px
+                    height: 6px
+                    border-radius: 6px
+                    margin: 0 7px
+                    background-color: var(--cerulean-blue)
+            &:nth-child(2)
+                font-weight: 600
+                
+        
+            
+
+
+.footer-list
+    margin: 0
+    &__title
+        display: block
+        margin: 0 0 30px
+    &__item
+        margin: 0 0 20px
+
+
+                

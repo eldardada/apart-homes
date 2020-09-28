@@ -39,9 +39,23 @@
     box-shadow: 0px 1.81045px 18.1045px rgba(0, 0, 0, 0.1)
     &__footer
         padding: 25px
+    &__text
+        position: relative
+        padding-left: 20px
+        margin-bottom: 43px
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            display: inline-block
+            width: 4px
+            height: 45px
+            background-color: red
     &__title
+        display: inline-block
         margin: 0 0 5px
     &__subtitle
+        display: inline-block
         margin: 0
     &-info
         display: flex
@@ -49,6 +63,8 @@
         flex-direction: column
         justify-content: space-around
         max-height: 80px
+        max-width: 273.94px
+        margin: 0 auto 30px
         &__item
             display: flex
             align-items: center
@@ -59,6 +75,7 @@
         display: flex
         justify-content: space-between
         align-items: center
+
 .image-slider
     position: relative
     height: 188px

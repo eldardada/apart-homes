@@ -1,0 +1,84 @@
+.main-form
+    $mt: 73px
+    background-color: red
+    margin: $mt 0 130px
+    min-height: 500px
+    background-size: cover
+    &__container
+        position: relative
+    &__user-form
+        position: absolute
+        top: -$mt
+        right: 11.3%
+    
+.user-form
+    width: 570px
+    background: var(--color-white)
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3)
+    border-radius: 20px
+    padding: 50px 66px
+    &__title
+        margin: 0 0 30px
+        font-size: 23px
+        font-weight: 600
+    &__subtitle
+        font-size: 18px
+        line-height: 22px
+        margin: 0 0 35px
+    &__input
+        display: block
+        margin-bottom: 22px
+
+        > span            
+            display: block
+            margin-bottom: 10px
+        > input
+            width: 100%
+            border: 1px solid #BDBDBD
+            border-radius: 20px
+            padding: 15px 20px
+    &__connects
+        margin-bottom: 38px
+    &__btn
+        margin-bottom: 30px
+        width: 100%
+    &__processing
+        font-weight: 300
+        color: var(--color-gray)
+        font-size: 14px
+.user-input-title
+    color: var(--color-gray)
+    font-weight: 300
+    display: block
+
+.form-connects
+    &__title
+        margin: 0 0 22px
+    &__list
+        display: flex
+        margin: 0
+    &__item
+        &:not(:last-child)
+            margin-right: 30px
+        > label
+            +checkbox-custom
+            position: relative
+            > input
+                &:checked + span::before
+                    content: ''
+                    position: absolute
+                    padding: 0
+                    width: 0.8em
+                    height: 0.8em
+                    left: 0.15em
+                    top: 0.15em
+                    border-radius: 0.8em
+                    background-color: var(--cerulean-blue)
+            > span
+                background-color: transparent
+                border: 1px solid #BDBDBD
+                border-radius: 1em
+            > strong
+                font-weight: 300
+                color: var(--color-gray)
+                margin-left: 9px
