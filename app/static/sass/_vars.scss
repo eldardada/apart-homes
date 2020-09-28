@@ -1,9 +1,13 @@
 :root {
     --color-black: #000;
     --color-white: #fff;
+    --cerulean-blue: #2D57B3;
+    --mine-shaft: #1f1f1f;
+    --color-broom: #FFE926;
 }
 
-$mainFont: 'Arial';
+$mainFont: 'Lato';
 $bodyBgc: var(--color-white);
 $bodyFw: 400;
+$bodyFz: 16px;
 

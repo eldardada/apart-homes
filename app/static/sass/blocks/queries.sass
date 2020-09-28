@@ -1,0 +1,41 @@
+.queries
+    padding: 80px 0 0
+    &__title
+        margin: 0 0 20px
+        padding-bottom: 29px
+        padding-left: 52px
+        border-left: 1px solid #000
+        border-bottom: 1px solid #000
+
+.queries-info
+    display: flex
+    justify-content: space-between
+    margin: 0 52px
+    border-bottom: 2px solid #E0E0E0
+    &__title
+        font-size: 20px
+        margin: 0 0 30px
+        display: inline-block
+        position: relative
+        &::before
+           content: ''
+           display: inline-block
+           vertical-align: middle
+           margin-right: 10px
+           width: 5px
+           height: 25px
+           background-color: #FF4019 
+    &__list
+        margin: 0
+        max-width: 430px
+.queries-list
+    padding-bottom: 80px
+    &__item
+        font-size: 18px
+        &:not(:last-child)
+            margin-bottom: 25px
+        > a
+            transition: color .3s
+            &:hover
+                color: var(--cerulean-blue)
+    

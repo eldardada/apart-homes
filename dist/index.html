@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+    <div class="container header__container">
+        <a href="#" class="logo header__logo">
+            <img src="./static/img/logo.svg" alt="logo">
+        </a>
+        <nav class="nav header__nav">
+            <ul class="header__nav-list nav-list">
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link">
+                        Каталог недвижимости
+                        <svg class="arrow-down">
+                            <use xlink:href="./static/img/svg/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link">
+                        Блог
+                    </a>
+                </li>
+                <li class="nav-list__item">
+                    <a href="#" class="nav-list__link">
+                        О нас
+                        <svg class="arrow-down">
+                            <use xlink:href="./static/img/svg/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="nav-contacts">
+            <li class="nav-contacts__item">
+                <a href="tel:+7800200697799" class="nav-contacts__link">
+                    <svg>
+                        <use xlink:href="./static/img/svg/sprite.svg#phone"></use>
+                    </svg>
+                    +7 800 200 69 77
+                </a>
+            </li>
+            <li class="nav-contacts__item">
+                <a href="tomail:hello@apart-homes.com" class="nav-contacts__link">
+                    <svg>
+                        <use xlink:href="./static/img/svg/sprite.svg#mail"></use>
+                    </svg>
+                    hello@apart-homes.com
+                </a>
+            </li>
+        </ul>
+        <button class="header__btn btn-cta">Обратный звонок</button>
+        <ul class="header-params">
+            <li class="header-params__item">
+                <a href="#" class="header-params__link">
+                    $
+                    <svg class="arrow-down">
+                        <use xlink:href="./static/img/svg/sprite.svg#arrow-down"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header-params__item">
+                <a href="#" class="header-params__link">
+                    rus
+                    <svg class="arrow-down">
+                        <use xlink:href="./static/img/svg/sprite.svg#arrow-down"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+    <main class="main">
+        <section class="main-hero" style="background-image: url('static/img/hero-image.jpg');">
+    <div class="container main-hero__container">
+        <h1 class="main-hero__title">Продажа недвижимости на Пкухете</h1>
+        <p class="main-hero__subtitle">Инвестиционная недвижимость напрямую от застройщиков Беспроцентная рассрочка. Никаких комиссий.</p>
+        <ul class="main-hero-btns btns-nav">
+            <li class="btns-nav__item">
+                <a href="#" class="btns-nav__link btn-nav">Вся недвижимость</a>
+            </li>
+            <li class="btns-nav__item">
+                <a href="#" class="btns-nav__link btn-nav">Виллы</a>
+            </li>
+            <li class="btns-nav__item">
+                <a href="#" class="btns-nav__link btn-nav">Апартаменты</a>
+            </li>
+            <li class="btns-nav__item">
+                <a href="#" class="btns-nav__link btn-nav">Таунхаусы</a>
+            </li>
+        </ul>
+    </div>
+</section>
+        <section class="queries">
+    <div class="container queries__container">
+        <h2 class="section-title queries__title">Популярные запросы:</h2>
+        <div class="queries-info">
+            <div class="queries-info-col">
+                <h3 class="queries-info__title">Недвижимость от $ 100 000 до $ 200 000</h3>
+                <ul class="queries-info__list queries-list">
+                    <li class="queries-list__item">
+                        <a href="">Недвижимость с доходностью от 7% годовых</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="">Недвижимость от $ 100 000 до $ 200 000</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="">Виллы от $ 400 000 до $ 600 000</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="">Недвижимость на пляже Бангтао</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="queries-info-col">
+                <h3 class="queries-info__title">Блог</h3>
+                <ul class="queries-info__list queries-list">
+                    <li class="queries-list__item">
+                        <a href="#">Как получать прибыль до 10% годовых при покупке квартиры на Пхукете</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="#">Как купить недвижимость на Пхукете? 5 простых шагов</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="#">Визы в Таиланд 2019</a>
+                    </li>
+                    <li class="queries-list__item">
+                        <a href="#">Как купить недвижимость на Пхукете удаленно?</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+        <section class="offers">
+    <div class="container offers__container">
+        <h2 class="section-title offers__title">Интересные предложения:</h2>
+        <button class="offers__prev">
+            <svg>
+                <use xlink:href="./static/img/svg/sprite.svg#prev"></use>
+            </svg>
+        </button>
+        <button class="offers__next">
+            <svg>
+                <use xlink:href="./static/img/svg/sprite.svg#next"></use>
+            </svg>
+        </button>
+        <div class="offers-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <article class="offer">
+                        <div class="offer-image image-slider">
+                            <button class="image-slider__prev">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#prev"></use>
+                                </svg>
+                            </button>
+                            <button class="image-slider__next">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#next"></use>
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-1.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-2.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-3.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__footer">
+                            <div class="offer__text">
+                                <h3 class="offer__title">Pasak Villas</h3>
+                                <p class="offer__subtitle">виллы №2-8 с тремя спальнями</p>
+                            </div>
+                            <ul class="offer-info">
+                                <li class="offer-info__item">
+                                    <img src="static/img/home-icon.svg" alt="">
+                                    <span>Раваи</span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/houses-icon.svg" alt="">
+                                    <span>1630 $ м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/metr-icon.svg" alt="">
+                                    <span>701 м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/dollar-icon.svg" alt="">
+                                    <span>58940 $ в год</span>
+                                </li>
+                            </ul>
+                            <div class="offer-bottom">
+                                <strong>$ 605 360</strong>
+                                <a href="#" class="offer__btn btn-cta btn-cta--more">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="offer">
+                        <div class="offer-image image-slider">
+                            <button class="image-slider__prev">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#prev"></use>
+                                </svg>
+                            </button>
+                            <button class="image-slider__next">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#next"></use>
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-2.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-1.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-3.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__footer">
+                            <div class="offer__text">
+                                <h3 class="offer__title">Pasak Villas</h3>
+                                <p class="offer__subtitle">виллы №2-8 с тремя спальнями</p>
+                            </div>
+                            <ul class="offer-info">
+                                <li class="offer-info__item">
+                                    <img src="static/img/home-icon.svg" alt="">
+                                    <span>Раваи</span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/houses-icon.svg" alt="">
+                                    <span>1630 $ м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/metr-icon.svg" alt="">
+                                    <span>701 м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/dollar-icon.svg" alt="">
+                                    <span>58940 $ в год</span>
+                                </li>
+                            </ul>
+                            <div class="offer-bottom">
+                                <strong>$ 605 360</strong>
+                                <a href="#" class="offer__btn btn-cta btn-cta--more">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="offer">
+                        <div class="offer-image image-slider">
+                            <button class="image-slider__prev">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#prev"></use>
+                                </svg>
+                            </button>
+                            <button class="image-slider__next">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#next"></use>
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-3.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-2.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-1.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__footer">
+                            <div class="offer__text">
+                                <h3 class="offer__title">Pasak Villas</h3>
+                                <p class="offer__subtitle">виллы №2-8 с тремя спальнями</p>
+                            </div>
+                            <ul class="offer-info">
+                                <li class="offer-info__item">
+                                    <img src="static/img/home-icon.svg" alt="">
+                                    <span>Раваи</span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/houses-icon.svg" alt="">
+                                    <span>1630 $ м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/metr-icon.svg" alt="">
+                                    <span>701 м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/dollar-icon.svg" alt="">
+                                    <span>58940 $ в год</span>
+                                </li>
+                            </ul>
+                            <div class="offer-bottom">
+                                <strong>$ 605 360</strong>
+                                <a href="#" class="offer__btn btn-cta btn-cta--more">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <article class="offer">
+                        <div class="offer-image image-slider">
+                            <button class="image-slider__prev">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#prev"></use>
+                                </svg>
+                            </button>
+                            <button class="image-slider__next">
+                                <svg>
+                                    <use xlink:href="./static/img/svg/sprite.svg#next"></use>
+                                </svg>
+                            </button>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-1.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-2.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="swiper-lazy" data-src="static/img/offer-3.jpg">
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer__footer">
+                            <div class="offer__text">
+                                <h3 class="offer__title">Pasak Villas</h3>
+                                <p class="offer__subtitle">виллы №2-8 с тремя спальнями</p>
+                            </div>
+                            <ul class="offer-info">
+                                <li class="offer-info__item">
+                                    <img src="static/img/home-icon.svg" alt="">
+                                    <span>Раваи</span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/houses-icon.svg" alt="">
+                                    <span>1630 $ м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/metr-icon.svg" alt="">
+                                    <span>701 м<sup>2</sup></span>
+                                </li>
+                                <li class="offer-info__item">
+                                    <img src="static/img/dollar-icon.svg" alt="">
+                                    <span>58940 $ в год</span>
+                                </li>
+                            </ul>
+                            <div class="offer-bottom">
+                                <strong>$ 605 360</strong>
+                                <a href="#" class="offer__btn btn-cta btn-cta--more">Подробнее</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            
+        </div>
+    </div>
+</footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

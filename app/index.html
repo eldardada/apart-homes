@@ -8,9 +8,11 @@
 </head>
 <body>
     @@include("header.html")
-    <svg class="svg">
-        <use xlink:href="./static/img/svg/sprite.svg#SomeId"></use>
-    </svg>
+    <main class="main">
+        @@include('html/main-hero.html')
+        @@include('html/queries.html')
+        @@include('html/offers.html')
+    </main>
     @@include("footer.html")
     <script src="static/js/script.js"></script>
 </body>

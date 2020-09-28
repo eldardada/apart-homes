@@ -1,0 +1,36 @@
+.main-hero
+    position: relative
+    height: 600px
+    background-repeat: no-repeat
+    background-size: cover
+    color: var(--color-white)
+    &__container
+        z-index: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 100%
+        > *
+            z-index: inherit 
+    &__title
+        margin: 0 0 15px
+        font-size: 60px
+        font-weight: 700
+        max-width: 720px
+        text-align: center
+    &__subtitle
+        margin: 0 0 20px
+        font-size: 30px
+        text-align: center
+        max-width: 824px
+.btns-nav
+    display: flex
+    &__item
+        &:not(:last-child)
+            margin-right: 13px
+    &__link
+        display: block
+        width: 200px
+        text-align: center
+            
