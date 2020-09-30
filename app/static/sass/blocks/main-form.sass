@@ -4,27 +4,45 @@
     margin: $mt 0 130px
     min-height: 500px
     background-size: cover
+    +md-block
+        margin: 0
+    +md-block
+        background: none !important
     &__container
         position: relative
     &__user-form
         position: absolute
         top: -$mt
         right: 11.3%
+        +xl-block
+            right: 50%
+            transform: translateX(50%)
+        +md-block
+            transform: initial
+            position: static
+            margin: 0 auto
     
 .user-form
-    width: 570px
+    width: 100%
+    max-width: 570px
     background: var(--color-white)
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3)
     border-radius: 20px
     padding: 50px 66px
+    +md-block
+        padding: 38px 20px
     &__title
         margin: 0 0 30px
         font-size: 23px
         font-weight: 600
+        +md-block
+            text-align: center
     &__subtitle
         font-size: 18px
         line-height: 22px
         margin: 0 0 35px
+        +md-block
+            text-align: center
     &__input
         display: block
         margin-bottom: 22px
@@ -56,29 +74,41 @@
         margin: 0 0 22px
     &__list
         display: flex
-        margin: 0
+        justify-content: center
+        margin-bottom: -30px
     &__item
+        margin-bottom: 30px
         &:not(:last-child)
             margin-right: 30px
+            +xxs-block
+                margin-right: 20px
         > label
             +checkbox-custom
             position: relative
+            +extra-block
+                margin-right: 5px
+                font-size: 14px
             > input
                 &:checked + span::before
                     content: ''
                     position: absolute
-                    padding: 0
-                    width: 0.8em
-                    height: 0.8em
-                    left: 0.15em
-                    top: 0.15em
-                    border-radius: 0.8em
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    width: 8.44px
+                    height: 8.49px
+                    border-radius: 100%
                     background-color: var(--cerulean-blue)
             > span
                 background-color: transparent
                 border: 1px solid #BDBDBD
-                border-radius: 1em
+                border-radius: 100%
+                margin-top: 2px
+                width: 15px
+                height: 15px
             > strong
                 font-weight: 300
                 color: var(--color-gray)
                 margin-left: 9px
+                +sm-block
+                    margin-left: 0

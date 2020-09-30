@@ -1,14 +1,25 @@
 .offers
     padding: 80px 0
+    +sm-block
+        padding: 60px 0 20px
     &__container
         position: relative
+        padding-right: 50px
+        padding-left: 50px
+        +xs-block
+            padding-right: 0
+            padding-left: 0
     &__title
-        margin: 0 0 30px
+        font-size: 24px
+        margin: 0 20px 10px
+        +sm-block
+            text-align: center
     &__prev, &__next
         position: absolute
         display: flex
         align-items: center
         justify-content: center
+        z-index: 2
         height: 40px
         width: 40px
         border-radius: 40px
@@ -16,18 +27,33 @@
         top: 50%
         transform: translateY(-50%)
         box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1)
+        +xxs-block
+            height: 25px
+            width: 25px
+            svg
+                width: 6px
+                height: 11px
         svg
             fill: var(--cerulean-blue)
             width: 10px
             height: 18px
     &__prev
-        left: -30px
+        left: 10px
+        +extra-block
+            left: 2px
     &__next
-        right: -30px
+        right: 10px
+        +extra-block
+            right: 2px
     &-slider
         position: relative
         padding: 20px
         overflow: hidden
+        margin: 0 auto
+        +sm-block
+            max-width: 340px
+        +extra-block
+            max-width: 300px
 
     
 .offer
@@ -39,6 +65,8 @@
     box-shadow: 0px 1.81045px 18.1045px rgba(0, 0, 0, 0.1)
     &__footer
         padding: 25px
+        +sm-block
+            padding: 25px 15px
     &__text
         position: relative
         padding-left: 20px
@@ -49,32 +77,35 @@
             left: 0
             display: inline-block
             width: 4px
-            height: 45px
+            height: 100%
             background-color: red
     &__title
-        display: inline-block
         margin: 0 0 5px
     &__subtitle
-        display: inline-block
         margin: 0
     &-info
         display: flex
         flex-wrap: wrap
-        flex-direction: column
         justify-content: space-around
-        max-height: 80px
-        max-width: 273.94px
+        max-width: 274px
         margin: 0 auto 30px
+        +font(16, 14)
         &__item
             display: flex
             align-items: center
+            flex-basis: calc(50% - 10px)
             margin-bottom: 15px
+            margin-right: 10px
             img
                 margin-right: 10px
     &-bottom
         display: flex
         justify-content: space-between
         align-items: center
+    &__btn
+        +md-block
+            border-radius: 15px
+            padding: 8px 20px
 
 .image-slider
     position: relative
@@ -85,21 +116,31 @@
         width: 100%
         height: 100%
     &__prev, &__next
+        padding: 0
         position: absolute
-        display: flex
-        justify-content: center
-        align-items: center
         top: 50%
-        z-index: 2
-        height: 30px
+        overflow: hidden
+        z-index: 20
+        height: 30px 
         width: 30px
-        border-radius: 100%
+        border-radius: 30px
         background-color: var(--color-white)
-        box-shadow: 0px 2.53675px 25.3675px rgba(0, 0, 0, 0.1)
+        box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1)
         transform: translateY(-50%)
         svg
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
             width: 8px
             height: 14px
+        +xxs-block
+            height: 25px
+            width: 25px
+            svg
+                width: 6px
+                height: 11px
+           
     &__prev
         left: 10px
     &__next

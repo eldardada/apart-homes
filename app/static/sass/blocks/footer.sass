@@ -1,27 +1,85 @@
 .footer
     padding: 60px 0
     background-color: var(--color-lightbg)
+    @media screen and ( max-width:  662px)
+        text-align: center
+    @media screen and ( max-width: 490px )
+        padding: 20px 0    
     &__container
         display: flex
         flex-wrap: wrap
         align-items: top
-        justify-content: space-between
+        justify-content: space-around
+        margin-bottom: -40px
+        @media screen and ( max-width: 490px )
+            flex-direction: column-reverse
+            margin-bottom: 0
+    &__col
+        margin-bottom: 40px
+        @media screen and ( max-width: 662px )
+            flex-basis: 50%
+        @media screen and ( max-width: 490px )
+            margin-bottom: 19px
+        &--1
+            @media screen and ( max-width: 490px )
+                margin-bottom: 0
+        &--2
+            @media screen and ( max-width: 490px )
+                display: none
+        &--3
+            @media screen and ( max-width: 662px )
+                flex-basis: 50%
+            @media screen and ( max-width: 490px )
+                display: none
+        @media screen and ( max-width: 490px )
+            flex-basis: 100%
     &__mail
         display: block
         margin-bottom: 40px
+        @media screen and ( max-width: 490px )
+            margin-bottom: 19px
     &__phones
         display: block
-        margin: 0 0 35px
+        margin-bottom: 35px
+        @media screen and ( max-width: 490px )
+            margin-bottom: 19px
     &__logo
         margin-bottom: 45px
+        @media screen and ( max-width: 490px )
+            margin-bottom: 15px
+            > img
+                width: 229px
+                height: 49px
+            
+    &__phones-and-socials
+        +xl-block
+            flex-basis: 100%
+            display: flex
+            margin-top: 40px
+            justify-content: space-around
+            > div
+                +col
+        @media screen and ( max-width:  662px)
+            flex-direction: column
+            flex-basis: 50%
+            margin-top: 0
+    &__social
+        @media screen and ( max-width:  662px)
+            justify-content: center
+            
 .footer-phones
     svg
         width: 15px
         height: 15px
     &__item
+        > span
+            @media screen and ( max-width:  662px)
+                display: block
+            @media screen and ( max-width:  490px)
+                display: inline-block
         &:not(:last-child)
             margin-bottom: 25px
-        span
+        a > span
             font-size: 18px
             &::after
                 content: ''
@@ -31,7 +89,10 @@
                 width: 15px
                 height: 1px
                 background-color: black
-                
+                @media screen and ( max-width:  662px)
+                    display: none
+                @media screen and ( max-width:  490px)
+                    display: inline-block
 
 .footer-mail
     svg
@@ -73,8 +134,23 @@
     font-size: 14px
     color: var(--color-gray)
     &__item
+        &--1
+            @media screen and (max-width: 490px)
+                display: inline-block
+                vertical-align: top
+                margin-right: 25px
+        &--2
+            @media screen and (max-width: 490px)
+                display: inline-block
+                max-width: 151px
+                text-align-last: left
+        &--3, &--4, &--5
+            @media screen and (max-width: 490px)
+                display: none
         &:not(:last-child)
             margin-bottom: 15px
+            @media screen and ( max-width:  490px)
+                margin-bottom: 0
         &:first-child
             color: #828282
             font-size: 16px
@@ -83,7 +159,6 @@
             margin-bottom: 30px
         &:nth-child(4)
             margin-bottom: 30px
-        &:last-child
     &__dev
         > span
             &:nth-child(1)
@@ -100,15 +175,12 @@
             &:nth-child(2)
                 font-weight: 600
                 
-        
-            
-
 
 .footer-list
     margin: 0
     &__title
         display: block
-        margin: 0 0 30px
+        margin-bottom: 30px
     &__item
         margin: 0 0 20px
 

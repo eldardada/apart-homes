@@ -250,8 +250,9 @@ function watch() {
       gulp.watch(config.watch.sass, styles)
       gulp.watch(config.watch.img, images)
       gulp.watch(config.watch.js, scripts)
-      gulp.watch(config.watch.svg, svg)
+      gulp.watch(config.watch.js, scripts)
       gulp.watch(config.watch.grid, grid)
+      gulp.watch(config.watch.svg, svg)
       gulp.watch(config.watch.fonts, ttf2woff);
       gulp.watch(config.watch.fonts, ttf2woff2);
       gulp.watch('./dist/static/fonts', fontsStyle);
@@ -284,10 +285,10 @@ function svg() {
 }
 
 function grid(done){
-    let settings = require(config.watch.grid)
-    smartgrid(appDirstatic + 'sass/libs', settings)
+  let settings = require('./smartgrid');
+    smartgrid('app/static/sass/libs', settings)
     done()
-};
+  };
 
 let build = gulp.series(clean, gulp.parallel(styles, php, html, images, scripts, fontTtf2Woff, fontTtf2Woff2, fontsStyle, svg));
 

@@ -1,22 +1,39 @@
 .queries
     padding: 80px 0 0
+    margin-bottom: -45px
+    +sm-block
+        padding: 60px 0 0
     &__title
-        margin: 0 0 20px
+        font-size: 24px
+        margin-bottom: 20px
         padding-bottom: 29px
         padding-left: 52px
         border-left: 1px solid #000
         border-bottom: 1px solid #000
-
+        +sm-block
+            margin-bottom: 40px
+            text-align: center
+            padding: 0
+            border: none 
 .queries-info
-    display: flex
-    justify-content: space-between
-    margin: 0 52px
+    +row-flex
     border-bottom: 2px solid #E0E0E0
+    padding: 0 52px
+    +sm-block
+        padding: 0 20px
+    +xs-block
+        padding: 0
+        border: none
+    +md-block
+        padding: 0 20px
     &__title
         font-size: 20px
         margin: 0 0 30px
         display: inline-block
         position: relative
+        +md-block
+            span
+                display: none
         &::before
            content: ''
            display: inline-block
@@ -28,8 +45,15 @@
     &__list
         margin: 0
         max-width: 430px
+    &-col
+        +col
+        +size(6)
+        +size-xs(12)
 .queries-list
     padding-bottom: 80px
+    +sm-block
+        padding-bottom: 0
+        margin-bottom: 45px
     &__item
         font-size: 18px
         &:not(:last-child)

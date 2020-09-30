@@ -1,36 +1,175 @@
 .header
+    height: 90px
+    padding: 20px 0
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2)
+    position: relative
+    +sm-block
+        padding: 15px 0
+        height: 60px
     &__container
         display: flex
         justify-content: space-between
         align-items: center
-        padding: 1px 27px 0
+        +xxs-block
+            padding: 0 10px
     &__logo
         margin-right: 22px
+        +xl-block
+            margin-right: 0
+    &__menu
+        display: flex
+        +sm-block
+            position: fixed
+            overflow-y: auto
+            overflow-x: hidden
+            z-index: 2
+            top: 0
+            right: 0
+            bottom: 0
+            justify-content: center
+            font-size: 18px
+            color: var(--color-white)
+            padding: 10px
+            padding-top: 30px
+            flex-direction: column
+            background-color: var(--color-gray)
+            transform: translateX(500px)
+            transition: transform .4s ease-in-out
+            .header__nav-list
+                position: static
+                display: flex
+                flex-direction: column
+            .header__nav-contacts
+                position: static
+        &--active
+            +sm-block
+                transform: translateX(0)
     &__nav-list
+        z-index: 200
+        margin: 0
         margin-right: 40px
+        height: max-content
+        +xl-block
+            margin-bottom: 10px
+            position: absolute
+            left: 15px
+            top: calc(100% - 20px)
+    &__nav-contacts
+        margin: 0 37px 0 0
+        +xl-block
+            margin-left: auto
+        +md-block
+            margin-right: auto
+        +sm-block
+            margin: 0
+
+    &__params
+        +xl-block
+            position: absolute
+            right: 5px
+            top: calc(100% + 5px)
+        +sm-block
+            left: 5px
     &__btn
+        +font(16, 14)
         margin-right: 37px
+        +xl-block
+            margin-right: 0
+        +sm-block
+            padding: 7px 10px
+            margin-left: auto
+            margin-right: 10px
+    &__burger
+        display: none
+        overflow: hidden
+        +sm-block
+            display: block
+.logo
+    &__image--1
+        +sm-block
+            display: none
+    &__image--2
+        display: none
+        +sm-block
+            display: block
+
 .nav-list
     display: flex
+    +sm-block
+        align-items: center
+        text-align: center
+        width: 100%
     &__item
+        margin-bottom: 10px
+        position: relative
         &:not(:last-child)
             margin-right: 35px
+            +sm-block
+                margin: 0
+        &--active
+            .nav-list__nested-list
+                z-index: 100
+                height: initial
+                transform: scaleY(1)
     &__link
+        +sm-block
+            display: block
+            margin-bottom: 10px
         svg
             margin-bottom: 1px
             margin-left: 8px
+        +sm-block
+            svg
+                fill: var(--color-white)
+    &__nested-list
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        min-width: 100px
+        z-index: 1
+        background-color: var(--color-white)
+        border-radius: 0 0 10px 10px
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4)
+        transform: scaleY(0)
+        transform-origin: top
+        transition: transform .3s
+        +sm-block
+            position: static
+            height: 0
+            background-color: transparent
+            padding: 0
+            box-shadow: none
+        > li
+            font-size: 14px
+            padding: 5px 10px
+            +sm-block
+                font-size: 18px
+                padding: 5px 0
+            &:not(:last-child)
+                border-bottom: 1px solid var(--color-gray)
+                +sm-block
+                    border-bottom: none
 .nav-contacts
-    margin-right: 36px
+    +sm-block
+        display: flex
+        flex-direction: column
+        margin: 0 auto
     &__item
         margin-bottom: 12px
     &__link
         display: flex
         align-items: center
+        +sm-block
+            span
+                margin: 0 auto
         svg
             width: 15px
             height: 15px
             margin-right: 8px
             fill: var(--cerulean-blue)
+            +sm-block
+                display: none
     
 .header-params
     display: flex
@@ -40,4 +179,61 @@
         svg
             margin-left: 8px
             margin-bottom: 1px
+
+.burger
+    width: 45px
+    height: 30px
+    position: relative
+    z-index: 2
+.ham 
+    cursor: pointer
+    position: absolute
+    -webkit-tap-highlight-color: transparent
+    transition: transform 400ms
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    user-select: none
+    width: 200%
+    height: 200%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    
+  
+.hamRotate.active
+  transform: rotate(45deg)
+
+.hamRotate180.active
+  transform: rotate(180deg)
+
+.line 
+    fill: none
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms
+    stroke: var(--cerulean-blue)
+    stroke-width: 5.5
+    stroke-linecap: round
+  
+.ham6 .top 
+  stroke-dasharray: 40 172
+
+.ham6 .middle 
+  stroke-dasharray: 40 111
+
+.ham6 .bottom 
+  stroke-dasharray: 40 172
+
+.ham6.active
+    > *
+        stroke: var(--color-white)
+.ham6.active .top 
+  stroke-dashoffset: -132px
+
+.ham6.active .middle 
+  stroke-dashoffset: -71px
+
+.ham6.active .bottom 
+  stroke-dashoffset: -132px
+
+
             
