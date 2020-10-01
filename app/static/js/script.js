@@ -42,6 +42,8 @@ if(document.querySelector('.header')) {
 		if(link) {
 			const listItem = target.closest('.nav-list__item');
 			listItem.classList.toggle('nav-list__item--active');
+			const arrow = link.querySelector('.arrow-down');
+			arrow.classList.toggle('arrow-down-active')
 		}
 		else {
 			const navListItemsActive =  navList.querySelectorAll('.nav-list__item--active');
@@ -54,10 +56,27 @@ if(document.querySelector('.header')) {
 		const headerBurger = target.closest('.header__burger');
 		if(headerBurger) {
 			const headerMenu = document.querySelector('.header__menu');
-			headerMenu.classList.toggle('header__menu--active');
 			const body = document.querySelector('body');
+			headerMenu.classList.toggle('header__menu--active');
+			body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+			
 		}
 		
 	});
 }
+
+const formConnects = document.querySelector('.form-connects__list');
+
+formConnects.addEventListener('change', e => {
+	const target = e.target;
+	const checks = formConnects.querySelectorAll('input[type="checkbox"]');
+	const checked = target.checked;
+
+	checks.forEach(el => {
+		el.checked = false;
+		console.log(el.checked);
+	});
+
+	target.checked = checked;
+});
 

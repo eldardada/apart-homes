@@ -5,6 +5,10 @@
         text-align: center
     @media screen and ( max-width: 490px )
         padding: 20px 0    
+    a
+        transition: color .3s
+        &:hover
+            color: var(--cerulean-blue)
     &__container
         display: flex
         flex-wrap: wrap
@@ -80,7 +84,7 @@
         &:not(:last-child)
             margin-bottom: 25px
         a > span
-            font-size: 18px
+            +font(18, 14)
             &::after
                 content: ''
                 vertical-align: middle
@@ -143,7 +147,7 @@
             @media screen and (max-width: 490px)
                 display: inline-block
                 max-width: 151px
-                text-align-last: left
+                text-align: left
         &--3, &--4, &--5
             @media screen and (max-width: 490px)
                 display: none
